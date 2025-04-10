@@ -129,13 +129,13 @@ FROM "Deployment" D
 JOIN "ResponseTeam" RT ON D."TeamID" = RT."TeamID"
 WHERE D."EventID" = 1;
 
----functions
+---Aggregates
 SELECT E."EventID", E."Type", SUM(RD."Quantity") AS "TotalAid"
 FROM "ResourceDistribution" RD
 JOIN "DisasterEvent" E ON RD."EventID" = E."EventID"
 GROUP BY E."EventID", E."Type";
 
----
+---Join
 SELECT AP."FullName", AR."ResourceType", RD."Quantity"
 FROM "ResourceDistribution" RD
 JOIN "AffectedPerson" AP ON RD."PersonID" = AP."PersonID"
