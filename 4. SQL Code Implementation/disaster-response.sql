@@ -127,7 +127,7 @@ WHERE "DeploymentID" = 3;
 SELECT RT."Name", D."DeploymentDate"
 FROM "Deployment" D
 JOIN "ResponseTeam" RT ON D."TeamID" = RT."TeamID"
-WHERE D."EventID" = 1;
+WHERE D."EventID" = 2;
 
 ---Aggregates
 SELECT E."EventID", E."Type", SUM(RD."Quantity") AS "TotalAid"
