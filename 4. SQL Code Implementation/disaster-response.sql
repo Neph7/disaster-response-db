@@ -146,6 +146,6 @@ SELECT * FROM "DisasterEvent"
 WHERE "EventID" IN (
     SELECT "EventID"
     FROM "ImpactReport"
-    WHERE "Casualties" > 100
+    WHERE "Casualties" > 10
 );
 
